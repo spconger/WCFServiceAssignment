@@ -10,6 +10,15 @@ public class BookReviewService : IBookReviewService
 {
     //make a connection to the data entities
     BookReviewDbEntities1 db = new BookReviewDbEntities1();
+
+    public List<string> GetAuthors()
+    {
+        var auth = (from a in db.Authors
+                    select a.AuthorName).ToList();
+        return auth;
+          
+    }
+
     public List<BookInfo> GetBooks()
     {
         //this method returns all the books

@@ -29,7 +29,10 @@ public interface IBookReviewService
 
     [OperationContract]
     List<Book> GetBooksByAuthor(string authorName);
-   
+
+    [OperationContract]
+    List<string> GetAuthors();
+
 }   
 
 /// <summary>
